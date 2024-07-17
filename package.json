@@ -1,6 +1,6 @@
 {
   "name": "@usama8800/windows-notification-reader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read windows notificaions from database",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,6 +11,7 @@
     "test-dev": "mocha --watch",
     "prebuild": "rimraf lib",
     "build": "tsc",
+    "postbuild": "cpy src/*.sql lib",
     "prepare": "npm run build"
   },
   "files": [
@@ -36,6 +37,7 @@
     "@typescript-eslint/parser": "^7.15.0",
     "@usama8800/dotenvplus": "^1.4.0",
     "chai": "^5.1.1",
+    "cpy-cli": "^5.0.0",
     "eslint": "^8.56.0",
     "eslint-plugin-disable-autofix": "^5.0.1",
     "mocha": "^10.6.0",

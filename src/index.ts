@@ -91,7 +91,7 @@ export async function getNotification(like?: {
 
   let chosen: Notification & { from: string, head: string, body: string } | undefined = undefined;
   while (!chosen) {
-    const notifications: Notification[] = await db.all(readFileSync('noti.sql').toString());
+    const notifications: Notification[] = await db.all(readFileSync(path.join(__dirname, 'noti.sql')).toString());
     for (const notification of notifications) {
       if (new Date(notification.arrivalTime).getTime() < like.after!) continue;
       if (!notification.payload) continue;
