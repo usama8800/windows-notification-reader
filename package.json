@@ -1,0 +1,52 @@
+{
+  "name": "@usama8800/windows-notification-reader",
+  "version": "1.0.0",
+  "description": "Read windows notificaions from database",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "nodemon",
+    "test": "mocha",
+    "test-dev": "mocha --watch",
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usama8800/windows-notification-reader.git"
+  },
+  "keywords": [
+    "dbus",
+    "notification"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.9",
+    "@types/node-notifier": "^8.0.5",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@usama8800/dotenvplus": "^1.4.0",
+    "chai": "^5.1.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-disable-autofix": "^5.0.1",
+    "mocha": "^10.6.0",
+    "node-notifier": "^10.0.1",
+    "nodemon": "^3.1.4",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.4.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
