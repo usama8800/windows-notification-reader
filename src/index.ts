@@ -58,6 +58,16 @@ type Binding = {
   text: (string | number)[];
 }
 
+/**
+ * Retrieves a notification from the database.
+ *
+ * @param {Object} [like] - Optional parameters to filter the notification.
+ * @param {string} [like.from] - The sender of the notification.
+ * @param {string} [like.head] - The head of the notification.
+ * @param {string} [like.body] - The body of the notification.
+ * @param {number} [like.after=now] - UTC epoch after which the notification was created.
+ * @returns {Promise<Notification>} A promise that resolves to the notification.
+ */
 export async function getNotification(like?: {
   from?: string | RegExp;
   head?: string | RegExp;

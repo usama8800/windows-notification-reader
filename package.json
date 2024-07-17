@@ -21,7 +21,8 @@
     "url": "https://github.com/usama8800/windows-notification-reader.git"
   },
   "keywords": [
-    "dbus",
+    "system",
+    "windows",
     "notification"
   ],
   "author": "",
